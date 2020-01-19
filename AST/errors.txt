@@ -1,0 +1,7 @@
+Error at 12:1: token -> KEYWORD, rompe. Expected: Statement starter
+Error at 38:13: token -> SPECIAL, {. Expected: then
+Error at 41:13: token -> SPECIAL, {. Expected: then
+Error at 43:17: token -> SPECIAL, {. Expected: then
+Error at 44:21: token -> SPECIAL, {. Expected: then
+Error at 45:25: token -> SPECIAL, {. Expected: then
+Error at 46:29: token -> SPECIAL, {. Expected: then

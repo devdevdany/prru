@@ -1,0 +1,36 @@
+* Standard prelude:
+0:  LD  6,0(0)	load maxaddress from location 0
+1:  ST  0,0(0)	clear location 0
+* End of standard prelude
+* -> assignment
+* -> Const
+2:  LDC  0,1.0(0)	Load const
+* <- Const
+3:  ST  0,0(5)	assignment: store value
+* <- assignment
+* -> assignment
+* -> Const
+4:  LDC  0,0.1(0)	Load const
+* <- Const
+5:  ST  0,1(5)	assignment: store value
+* <- assignment
+* -> assignment
+* -> Op
+* -> Id
+6:  LD  0,0(5)	Load ID value
+* <- Id
+7:  ST  0,0(6)	op: push left operand
+* -> Id
+8:  LD  0,1(5)	Load ID value
+* <- Id
+9:  LD  1,0(6)	op: load left operand
+10:  ADD  0,1,0	op +
+* <- Op
+11:  ST  0,2(5)	assignment: store value
+* <- assignment
+* -> Id
+12:  LD  0,2(5)	Load ID value
+* <- Id
+13:  OUTLN  0,0,0	-> write
+* End of execution
+14:  HALT  0,0,0	

@@ -1,0 +1,33 @@
+# Type a grammar here:
+
+Pr -> main llave_abre Ld Ls llave_cierra.
+Ld -> Dec punco Ld | .
+Dec -> Tipo Lv.
+Tipo -> int | real | boolean.
+Lv -> ident coma Lv | ident.
+Ls -> Sent Ls | Sent | .
+Sent -> Sel | Ite | Rep | Sent_cin | Sent_cout | Sent_coutln | Blo | Asi | Pre.
+Sel -> if paren_abre Exp paren_cierra then Blo | if paren_abre Exp paren_cierra then Blo else Blo.
+Ite -> while paren_abre Exp paren_cierra Blo_ciclo.
+Rep -> repeat Blo_ciclo until paren_abre Exp paren_cierra punco.
+Sent_cin -> cin ident punco.
+Sent_cout -> cout Exp punco.
+Sent_coutln -> coutln Exp punco.
+Blo -> llave_abre Ls llave_cierra.
+Blo_ciclo -> llave_abre Ls_ciclo llave_cierra.
+Ls_ciclo -> Sent Ls_ciclo | Sent_break Ls_ciclo | Sent | Sent_break | .
+Sent_break -> rompe punco.
+Asi -> ident Tipo_asi punco.
+Tipo_asi -> Asi_simple | Post.
+Asi_simple -> op_asign Exp.
+Post -> Una.
+Pre -> Una ident punco.
+Una -> inc | dec.
+Exp -> Exp_s Rel Exp_s | Exp_s.
+Rel -> menig | men | may | mayig | ig | dif.
+Exp_s -> Exp_s Suma_op Term | Term.
+Suma_op -> mas | menos.
+Term -> Term Mult_op Superfact | Superfact.
+Mult_op -> ast | diag.
+Superfact -> Suma_op Fact | Fact.
+Fact -> paren_abre Exp paren_cierra | num | ident | true | false.

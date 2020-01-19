@@ -1,0 +1,14 @@
+main.....KEYWORD.....1:1
+{.....SPECIAL.....1:6
+while.....KEYWORD.....3:1
+(.....SPECIAL.....3:6
+x.....ID.....3:7
+).....SPECIAL.....3:8
+{.....SPECIAL.....3:10
+x.....ID.....5:1
+++.....OP.....5:2
+;.....SPECIAL.....5:4
+rompe.....KEYWORD.....6:1
+;.....SPECIAL.....6:6
+}.....SPECIAL.....7:1
+}.....SPECIAL.....94:1
